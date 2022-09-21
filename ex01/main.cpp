@@ -7,15 +7,24 @@ int main()
 {
 	std::string input = "START";
 	PhoneBook	repertoire;
-	//while (input.compare("EXIT"))
-	for(;input.compare("EXIT");std::cout << "input : " && std::getline(std::cin, input))
+	for(;std::cout << "input : " && std::getline(std::cin, input);)
 	{
 		if (!input.compare("ADD"))
+		{
+			std::cout << "********************ADD*******************\n\n";
 			repertoire.add_contact();
+			std::cout << "******************************************\n\n";
+		}
 		else if (!input.compare("SEARCH"))
+		{
+			std::cout << "******************SEARCH******************\n\n";
 			repertoire.search_contact();
+			std::cout << "******************************************\n\n";
+		}
+		else if(!input.compare("EXIT"))
+			break ;
 		else if (input.compare("START"))
-			std::cout << "error input\nallowed command :\n-->EXIT\n-->ADD\n-->SEARCH\n";
+			std::cout << "****************ERROR INPUT****************\n\t\tallowed command :\n\t\t\t-->EXIT\n\t\t\t-->ADD\n\t\t\t-->SEARCH\n*******************************************\n";
 	}
 	return (0);
 }

@@ -35,3 +35,8 @@ void	Contact::fill_darkest_secret(std::string darkest_secret)
 {
 	info[4] = darkest_secret;
 }
+
+std::string	Contact::contacts_info(int wich_info) const
+{
+	return (info[wich_info]);
+}
