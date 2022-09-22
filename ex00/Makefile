@@ -4,10 +4,10 @@ TARGET:=megaphone
 OPT_98:= -Wall -Wextra -Werror --std=c++98
 
 ${TARGET} : ${OBJ}
-	g++ ${OPT_98} -o ${TARGET} ${OBJ}
+	c++ ${OPT_98} -o ${TARGET} ${OBJ}
 
 ${OBJ} : %.o : %.cpp
-	g++ -c $<
+	c++ -c $<
 
 clean :
 	rm -rf ${OBJ}

@@ -1,7 +1,8 @@
 #include <iostream>
 #include <string>
-#include <istream>
-#include "header.hpp"
+//#include <istream>
+#include "Contact.hpp"
+#include "PhoneBook.hpp"
 
 int main()
 {

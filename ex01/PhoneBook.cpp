@@ -1,6 +1,7 @@
 #include <iostream>
 #include <iomanip>
-#include "header.hpp"
+#include "Contact.hpp"
+#include "PhoneBook.hpp"
 
 
 PhoneBook::PhoneBook() : nb_contacts(0)
@@ -15,20 +16,26 @@ void PhoneBook::add_contact()
 		shift_contact();
 	while (1)
 	{
+
 		std::cout << "Name :";
-		std::getline(std::cin, contact_info);
+		if (!std::getline(std::cin, contact_info) && std::cout  << std::endl)
+			break ;
 		contacts[nb_contacts].fill_name(contact_info);
 		std::cout << "Lastname :";
-		std::getline(std::cin, contact_info);
+		if (!std::getline(std::cin, contact_info) && std::cout  << std::endl)
+			break ;
 		contacts[nb_contacts].fill_lastname(contact_info);
 		std::cout << "Nickname :";
-		std::getline(std::cin, contact_info);
+		if (!std::getline(std::cin, contact_info) && std::cout  << std::endl)
+			break ;
 		contacts[nb_contacts].fill_nickname(contact_info);
 		std::cout << "Phone number :";
-		std::getline(std::cin, contact_info);
+		if (!std::getline(std::cin, contact_info) && std::cout  << std::endl)
+			break ;
 		contacts[nb_contacts].fill_phone(contact_info);
-		std::cout << "Dark little secret :";
-		std::getline(std::cin, contact_info);
+		std::cout << "Dirty little secret :";
+		if (!std::getline(std::cin, contact_info) && std::cout  << std::endl)
+			break ;
 		contacts[nb_contacts].fill_darkest_secret(contact_info);
 		if (contacts[nb_contacts].contacts_info(NAME).size() && contacts[nb_contacts].contacts_info(L_NAME).size()\
 		&& contacts[nb_contacts].contacts_info(N_NAME).size() && contacts[nb_contacts].contacts_info(PHONE).size()\
@@ -73,11 +80,11 @@ void	PhoneBook::search_contact(void)
 		std::cout << "invalid field\n";
 		return ;
 	}
-	std::cout << "\n" << contacts[choice - 1].contacts_info(NAME) << "\n";
-	std::cout << contacts[choice - 1].contacts_info(L_NAME) << "\n";
-	std::cout << contacts[choice - 1].contacts_info(N_NAME) << "\n";
-	std::cout << contacts[choice - 1].contacts_info(PHONE) << "\n";
-	std::cout << contacts[choice - 1].contacts_info(SECRET) << "\n";
+	std::cout << "\n" << "name: " << contacts[choice - 1].contacts_info(NAME) << "\n";
+	std::cout << "last name: " << contacts[choice - 1].contacts_info(L_NAME) << "\n";
+	std::cout << "nick name: " << contacts[choice - 1].contacts_info(N_NAME) << "\n";
+	std::cout << "phone number: " << contacts[choice - 1].contacts_info(PHONE) << "\n";
+	std::cout << "dirty little secret: " << contacts[choice - 1].contacts_info(SECRET) << "\n";
 }
 
 void	swap_contact(Contact &x, Contact y)
@@ -94,7 +101,6 @@ void	PhoneBook::shift_contact(void)
 	int nb_contacts_cpy = 0;
 	Contact temp;
 
-	std::cout << "nb_contact = " << nb_contacts << "\n";
 	while (nb_contacts_cpy < nb_contacts)
 	{
 		swap_contact(contacts[nb_contacts_cpy], contacts[nb_contacts_cpy + 1]);

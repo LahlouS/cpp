@@ -1,13 +1,14 @@
-SRC:= contact_fct.cpp main.cpp phoneBook_fct.cpp
+SRC:= Contact.cpp main.cpp PhoneBook.cpp
 OBJ:= ${SRC:.cpp=.o}
 TARGET:= MyPhoneBook
 OPT_98:= -Wall -Wextra -Werror --std=c++98 -g
+HEADER:= Contact.hpp PhoneBook.hpp
 
-${TARGET} : ${OBJ}
-	g++ ${OPT_98} -o ${TARGET} ${OBJ}
+${TARGET} : ${OBJ} ${HEADER}
+	c++ ${OPT_98} -o ${TARGET} ${OBJ}
 
 ${OBJ} : %.o : %.cpp
-	g++ -c $<
+	c++ -c $<
 
 clean :
 	rm -rf ${OBJ}
