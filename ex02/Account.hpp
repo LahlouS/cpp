@@ -9,16 +9,14 @@
 
 
 #pragma once
-#ifndef __ACCOUNT_H__
-#define __ACCOUNT_H__
+#ifndef __ACCOUNT_HPP__
+#define __ACCOUNT_HPP__
 
 // ************************************************************************** //
 //                               Account Class                                //
 // ************************************************************************** //
 
 class Account {
-
-
 public:
 
 	typedef Account		t;
@@ -36,7 +34,6 @@ public:
 	bool	makeWithdrawal( int withdrawal );
 	int		checkAmount( void ) const;
 	void	displayStatus( void ) const;
-
 
 private:
 
@@ -56,14 +53,11 @@ private:
 
 };
 
-
-
 // ************************************************************************** //
 // vim: set ts=4 sw=4 tw=80 noexpandtab:                                      //
 // -*- indent-tabs-mode:t;                                                   -*-
 // -*- mode: c++-mode;                                                       -*-
 // -*- fill-column: 75; comment-column: 75;                                  -*-
 // ************************************************************************** //
-
 
 #endif /* __ACCOUNT_H__ */
