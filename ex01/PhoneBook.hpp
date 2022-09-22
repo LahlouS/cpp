@@ -1,5 +1,5 @@
-#ifndef HEADER_H
-# define HEADER_H
+#ifndef PHONEBOOK_HPP
+# define PHONEBOOK_HPP
 
 enum {
 	NAME,

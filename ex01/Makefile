@@ -1,7 +1,7 @@
 SRC:= Contact.cpp main.cpp PhoneBook.cpp
 OBJ:= ${SRC:.cpp=.o}
 TARGET:= MyPhoneBook
-OPT_98:= -Wall -Wextra -Werror --std=c++98 -g
+OPT_98:= -Wall -Wextra -Werror --std=c++98
 HEADER:= Contact.hpp PhoneBook.hpp
 
 ${TARGET} : ${OBJ} ${HEADER}
