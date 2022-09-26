@@ -1,6 +1,6 @@
-SRC:= main.cpp
+SRC:= main.cpp Harl.cpp
 OBJ:= ${SRC:.cpp=.o}
-TARGET:= mySed
+TARGET:= harl
 OPT_98:= -Wall -Wextra -Werror --std=c++98
 
 ${TARGET} : ${OBJ}
