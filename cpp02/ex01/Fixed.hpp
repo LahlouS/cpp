@@ -19,4 +19,6 @@ class Fixed {
 		static int const _fract;
 };
 
+std::ostream & operator<<(std::ostream & o, Fixed const & output);
+
 #endif
