@@ -1,20 +1,26 @@
-SRC:= Fixed.cpp main.cpp
-OBJ:= ${SRC:.cpp=.o}
-TARGET:= cpp02Ex00
-OPT_98:= -Wall -Wextra -Werror --std=c++98
+NAME= cpp02Ex02
+SRCS= main.cpp Fixed.cpp
+HEADER= Fixed.hpp
+OBJS=$(SRCS:.cpp=.o)
+COMPIL= c++
+FLAGS= -std=c++98 -Wall -Wextra -Werror
 
-${TARGET} : ${OBJ}
-	c++ ${OPT_98} -o ${TARGET} ${OBJ}
 
-${OBJ} : %.o : %.cpp
-	c++ -c $<
 
-clean :
-	rm -rf ${OBJ}
+%.o:	%.cpp
+	$(COMPIL) $(FLAGS) -c $< -o $@
 
-fclean :
-	make clean && rm -rf ${TARGET}
+all:	$(NAME)
 
-re :
-	make fclean && make
+$(NAME):	$(OBJS) $(HEADER)
+	$(COMPIL) $(FLAGS) $(OBJS) -o $@
 
+clean:
+	rm -rf $(OBJS)
+
+fclean:	clean
+	rm -rf $(NAME)
+
+re: fclean all
+
+.PHONY: all clean fclean re
