@@ -13,3 +13,29 @@ tutoriel openClassRoom :
 https://openclassrooms.com/fr/courses/7137751-programmez-en-oriente-objet-avec-c
 	-->top d'apres maxence, je pense qu'il sera pas trop redondant avec le C car prend uniquement la programmation oriente obj
 
+
+
+Comprendre l'heritage de c++:
+{
+
+Memory Layout of C++ Object in Different Scenarios :
+http://www.vishalchovatiya.com/memory-layout-of-cpp-object/
+
+Part 1: All About Virtual Keyword in C++: How Does Virtual Function Works Internally? :
+http://www.vishalchovatiya.com/part-1-all-about-virtual-keyword-in-cpp-how-virtual-function-works-internally/
+
+
+Inside the C++ Object Model
+http://www.vishalchovatiya.com/inside-the-cpp-object-model/
+
+How C Program Stored in Ram Memory! :
+http://www.vishalchovatiya.com/how-c-program-stored-in-ram-memory/
+
+
+C++ Inheritance Memory Model :
+https://medium.com/geekculture/c-inheritance-memory-model-eac9eb9c56b5
+
+FAQ cpp comprendre virtual :
+https://cpp.developpez.com/faq/cpp/?page=Les-fonctions-membres-virtuelles
+
+}
