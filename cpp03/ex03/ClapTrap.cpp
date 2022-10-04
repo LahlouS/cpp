@@ -22,7 +22,6 @@ ClapTrap::~ClapTrap(){
 }
 
 ClapTrap & ClapTrap::operator=(ClapTrap const & to_assign){
-	std::cout << "IIIIIIIIIIIIIIIIIIIIIICICICICICI" << std::endl;
 	_name = to_assign._name;
 	_hitPoint = to_assign._hitPoint;
 	_energyPoints = to_assign._energyPoints;
@@ -74,7 +73,7 @@ void		ClapTrap::beRepaired(unsigned int ammount){
 		std::cout << "ClapTrap" << this->_name << " too late im dead !!!!!!!!!!" << std::endl;
 }
 
-void		ClapTrap::print(void){
+void		ClapTrap::print(void) const{
 	std::cout << "******PRINT*******\n";
 	std::cout << "name: " << _name << std::endl;
 	std::cout << "hitpoint: " << _hitPoint << std::endl;

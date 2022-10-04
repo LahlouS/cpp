@@ -22,6 +22,14 @@ DiamondTrap::~DiamondTrap(){
 	std::cout << "Destructor for [DIAMONDTRAP] has been called\n";
 }
 
+DiamondTrap & DiamondTrap::operator=(DiamondTrap const & to_assign){
+	_name = to_assign._name;
+	_hitPoint = to_assign._hitPoint;
+	_energyPoints = to_assign._energyPoints;
+	_dammage = to_assign._dammage;
+	return(*this);
+}
+
 void	DiamondTrap::whoAmI()
 {
 	std::cout << "In whoAmI function, here is my name: " << this->_name << "\n";

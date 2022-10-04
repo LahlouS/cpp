@@ -27,6 +27,13 @@ ScavTrap::~ScavTrap(){
 	std::cout << "[ScavTrap] " << "destructor has been called for " << _name << std::endl;
 }
 
+ScavTrap & ScavTrap::operator=(ScavTrap const & to_assign){
+	_name = to_assign._name;
+	_hitPoint = to_assign._hitPoint;
+	_energyPoints = to_assign._energyPoints;
+	_dammage = to_assign._dammage;
+	return(*this);
+}
 
 void	ScavTrap::attack(const std::string& target){
 	if (this->_energyPoints > 0 && this->_hitPoint > 0)
