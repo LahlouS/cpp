@@ -1,22 +1,27 @@
-#include <iostream>
 #include "Brain.hpp"
 
 
-Cat::Cat() : Animal::Animal(){
-	this->type = "cat";
-	std::cout << "[cat] default constructor has been called\n";
+Brain::Brain(){
+	std::cout << "[Brain] Default constuctor has been called\n";
 }
 
-Cat::Cat(std::string const & assignement) : Animal::Animal(assignement){
-	this->type = assignement;
-	std::cout << "[cat] assignement constructor has been called\n";
+Brain::Brain(std::string const & assignement){
+	for (int i = 0; i < SIZE; i++)
+		this->ideas[i] = assignement;
+	std::cout << "[Brain] Assignement constructor as been called\n";
 }
 
-Cat & Cat::operator=(Cat const & to_assign){
-	this->type = to_assign.type;
+Brain::Brain(Brain const & to_assign){
+	std::cout << "[Brain] Copy constructor as been called\n";
+	*this = to_assign;
+}
+
+Brain & Brain::operator=(Brain const & to_assign){
+	for (int i = 0; i < SIZE; i++)
+		this->ideas[i] = to_assign.ideas[i];
 	return (*this);
 }
 
-Cat::Cat(Cat const & to_assign) : Animal::Animal(){
-	(*this) = to_assign;
+Brain::~Brain(){
+	std::cout << "[Brain] Destructor has been called\n";
 }

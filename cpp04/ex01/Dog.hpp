@@ -7,16 +7,15 @@
 
 class Dog : public Animal {
 	public :
-		Dog();
-		Dog(std::string const & assignement);
-		Dog(Dog const & to_assign);
-	Dog & operator=(Dog const & to_assign);
-		~Dog();
+			Dog();
+			Dog(std::string const & assignement);
+			Dog(Dog const & to_assign);
+		Dog & operator=(Dog const & to_assign);
+			~Dog();
 
-	void	makeSound(void) const;
+		void	makeSound(void) const;
 	private :
-		Brain *brain;
-
+		Brain	*brain;
 };
 
 #endif

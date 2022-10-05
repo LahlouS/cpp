@@ -9,7 +9,7 @@ class Animal{
 		Animal(Animal const & to_assign);
 		Animal(std::string const & assignement);
 		Animal & operator=(Animal const & to_assign);
-		~Animal();
+		virtual ~Animal();
 
 		std::string const & getType(void) const;
 		virtual void	makeSound(void) const;
