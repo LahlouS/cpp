@@ -1,4 +1,4 @@
-#include "Cat.hpp"
+#include "WrongCat.hpp"
 
 
 Cat::Cat() : Animal::Animal(){
@@ -18,10 +18,6 @@ Cat & Cat::operator=(Cat const & to_assign){
 
 Cat::Cat(Cat const & to_assign) : Animal::Animal(){
 	(*this) = to_assign;
-}
-
-Cat::~Cat(){
-	std::cout << "[cat] Destructor has been called\n";
 }
 
 void	Cat::makeSound(void) const{

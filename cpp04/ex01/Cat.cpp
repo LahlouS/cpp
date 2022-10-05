@@ -3,6 +3,7 @@
 
 Cat::Cat() : Animal::Animal(){
 	this->type = "cat";
+	this->brain = new Brain;
 	std::cout << "[cat] default constructor has been called\n";
 }
 
@@ -21,6 +22,7 @@ Cat::Cat(Cat const & to_assign) : Animal::Animal(){
 }
 
 Cat::~Cat(){
+	delete this->brain;
 	std::cout << "[cat] Destructor has been called\n";
 }
 

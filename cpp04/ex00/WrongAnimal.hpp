@@ -1,5 +1,5 @@
-#ifndef ANIMAL_HPP
-#define ANIMAL_HPP
+#ifndef WRONGANIMAL_HPP
+#define WRONGANIMAL_HPP
 
 #include <iostream>
 
@@ -12,7 +12,7 @@ class Animal{
 		~Animal();
 
 		std::string const & getType(void) const;
-		virtual void	makeSound(void) const;
+		void	makeSound(void) const;
 	protected:
 		std::string	type;
 };

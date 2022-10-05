@@ -1,6 +1,6 @@
 NAME= ex00
-SRCS= main.cpp Animal.cpp Dog.cpp Cat.cpp
-HEADER= Animal.hpp Dog.hpp Cat.hpp
+SRCS= main.cpp Animal.cpp Dog.cpp Cat.cpp Brain.cpp
+HEADER= Animal.hpp Dog.hpp Cat.hpp Brain.hpp
 OBJS=$(SRCS:.cpp=.o)
 COMPIL= c++
 FLAGS= -std=c++98 -Wall -Wextra -Werror

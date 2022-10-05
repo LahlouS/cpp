@@ -1,6 +1,7 @@
 #ifndef CAT_HPP
 #define CAT_HPP
 
+#include "Brain.hpp"
 #include "Animal.hpp"
 #include <iostream>
 
@@ -14,6 +15,7 @@ class Cat : public Animal {
 
 	void	makeSound(void) const;
 	private :
+		Brain *brain;
 };
 
 #endif
