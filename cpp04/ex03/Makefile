@@ -1,14 +1,13 @@
-NAME= ex00
-SRCS= main.cpp Animal.cpp Dog.cpp Cat.cpp WrongCat.cpp WrongAnimal.cpp
-HEADER= Animal.hpp Dog.hpp Cat.hpp WrongCat.hpp WrongAnimal.hpp
+NAME= ex03
+SRCS= main.cpp AMateria.cpp Character.cpp IceCure.cpp MateriaSrc.cpp
+HEADER= AMateria.hpp Character.hpp IceCure.hpp MateriaSrc.hpp
 OBJS=$(SRCS:.cpp=.o)
 COMPIL= c++
 FLAGS= -std=c++98 -Wall -Wextra -Werror
 
-
-
 %.o:	%.cpp
 	$(COMPIL) $(FLAGS) -c $< -o $@
+
 all:	$(NAME)
 
 $(NAME):	$(OBJS) $(HEADER)

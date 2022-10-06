@@ -1,26 +1,26 @@
 #include "WrongCat.hpp"
 
 
-Cat::Cat() : Animal::Animal(){
-	this->type = "cat";
-	std::cout << "[cat] default constructor has been called\n";
+WrongCat::WrongCat() : WrongAnimal::WrongAnimal(){
+	this->type = "WrongCat";
+	std::cout << "[WrongCat] default constructor has been called\n";
 }
 
-Cat::Cat(std::string const & assignement) : Animal::Animal(assignement){
+WrongCat::WrongCat(std::string const & assignement) : WrongAnimal::WrongAnimal(assignement){
 	this->type = assignement;
-	std::cout << "[cat] assignement constructor has been called\n";
+	std::cout << "[WrongCat] assignement constructor has been called\n";
 }
 
-Cat & Cat::operator=(Cat const & to_assign){
+WrongCat & WrongCat::operator=(WrongCat const & to_assign){
 	this->type = to_assign.type;
 	return (*this);
 }
 
-Cat::Cat(Cat const & to_assign) : Animal::Animal(){
+WrongCat::WrongCat(WrongCat const & to_assign) : WrongAnimal::WrongAnimal(){
 	(*this) = to_assign;
 }
 
-void	Cat::makeSound(void) const{
+void	WrongCat::makeSound(void) const{
 	std::cout << "Miaou Miaou Miaou\n";
 }
 

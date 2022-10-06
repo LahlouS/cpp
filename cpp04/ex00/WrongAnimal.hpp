@@ -3,13 +3,13 @@
 
 #include <iostream>
 
-class Animal{
+class WrongAnimal{
 	public:
-		Animal();
-		Animal(Animal const & to_assign);
-		Animal(std::string const & assignement);
-		Animal & operator=(Animal const & to_assign);
-		~Animal();
+		WrongAnimal();
+		WrongAnimal(WrongAnimal const & to_assign);
+		WrongAnimal(std::string const & assignement);
+		WrongAnimal & operator=(WrongAnimal const & to_assign);
+		~WrongAnimal();
 
 		std::string const & getType(void) const;
 		void	makeSound(void) const;

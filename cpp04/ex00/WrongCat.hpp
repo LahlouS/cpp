@@ -1,16 +1,16 @@
-#ifndef WRONGCAT_HPP
-#define WRONGCAT_HPP
+#ifndef WRONGWrongCat_HPP
+#define WRONGWrongCat_HPP
 
 #include "WrongAnimal.hpp"
 #include <iostream>
 
-class Cat : public Animal {
+class WrongCat : public WrongAnimal {
 	public :
-		Cat();
-		Cat(std::string const & assignement);
-		Cat(Cat const & to_assign);
-	Cat & operator=(Cat const & to_assign);
-		~Cat();
+		WrongCat();
+		WrongCat(std::string const & assignement);
+		WrongCat(WrongCat const & to_assign);
+	WrongCat & operator=(WrongCat const & to_assign);
+		~WrongCat();
 
 	void	makeSound(void) const;
 	private :

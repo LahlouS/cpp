@@ -12,7 +12,7 @@ Dog::Dog(std::string const & assignement) : Animal::Animal(assignement){
 	std::cout << "[Dog] assignement constructor has been called\n";
 }
 
-Dog & Dog::operator=(Dog const & to_assign){
+Animal & Dog::operator=(Animal const & to_assign){
 	std::cout << "surcharge du egale de DOG\n";
 	this->type = to_assign.getType();
 	delete this->brain;

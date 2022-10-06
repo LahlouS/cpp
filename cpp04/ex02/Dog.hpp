@@ -10,7 +10,7 @@ class Dog : public Animal {
 					Dog();
 					Dog(std::string const & assignement);
 					Dog(Dog const & to_assign);
-		Dog 		& operator=(Dog const & to_assign);
+		Animal 		& operator=(Animal const & to_assign);
 					~Dog();
 
 		void		makeSound(void) const;
