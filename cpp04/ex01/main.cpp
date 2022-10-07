@@ -48,12 +48,10 @@
 // 	std::cout << " Je suis un " << i->getType() << "\n";
 // 	std::cout << "\n\n";
 
-// 	*j = *i;
-
 // 	((Cat *) j)->setIdea("I'm a silly dog!\n", 0);
-// 	((Cat *) j)->setIdea("I'm a horny cat!\n", 1);
-// 	((Cat *) i)->setIdea("BLURRRRRRRRR\n", 0);
-// 	((Cat *) i)->setIdea("SNURRRRRRRRR\n", 1);
+// 	((Cat *) j)->setIdea("I'm a naughty cat!\n", 1);
+// 	((Cat *) i)->setIdea("foo foo foo foo foo\n", 0);
+// 	((Cat *) i)->setIdea("bar bar bar bar bar\n", 1);
 // 	std::cout << "IDEA 1: " << ((Cat *) j)->getIdea(0) << std::endl;
 // 	std::cout << "IDEA 2: " << ((Cat *) j)->getIdea(1) << std::endl;
 // 	std::cout << "IDEA 1: " << ((Cat *) i)->getIdea(0) << std::endl;

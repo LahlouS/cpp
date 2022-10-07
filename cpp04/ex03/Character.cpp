@@ -73,7 +73,7 @@ void Character::equip(AMateria* m) {
 }
 
 void Character::unequip(int idx) {
-	if (idx >= 0 && idx < NB_ITEMS){
+	if (idx >= 0 && idx < NB_ITEMS && this->items[idx]){
 		this->items[idx] = NULL;
 		std::cout << "[unequip] items at index [" << idx << "] has been drop, watch out for not loosing the adress\n";
 	} else {

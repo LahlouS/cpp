@@ -13,8 +13,8 @@ void	Harl::warning(void){
 	std::cout << "[WARNING]\nI think I deserve to have some extra bacon for free. I've been coming for years whereas you started working here since last month.\n" << std::endl;
 }
 
-void	Harl::error(void){
-	std::cout << "[ERROR]\nThis is unacceptable ! I want to speak to the manager now.\n" << std::endl;
+void	Harl::Erreur(void){
+	std::cout << "[Erreur]\nThis is unacceptable ! I want to speak to the manager now.\n" << std::endl;
 }
 
 Harl::Harl()
@@ -22,11 +22,11 @@ Harl::Harl()
 	opt[0] = "DEBUG";
 	opt[1] = "INFO";
 	opt[2] = "WARNING";
-	opt[3] = "ERROR";
+	opt[3] = "Erreur";
 	message[0] = &Harl::debug;
 	message[1] = &Harl::info;
 	message[2] = &Harl::warning;
-	message[3] = &Harl::error;
+	message[3] = &Harl::Erreur;
 }
 
 Harl::~Harl(){

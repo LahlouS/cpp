@@ -3,7 +3,7 @@ SRCS= main.cpp Fixed.cpp
 HEADER= Fixed.hpp
 OBJS=$(SRCS:.cpp=.o)
 COMPIL= c++
-FLAGS= -std=c++98 -Wall -Wextra -Werror
+FLAGS= -std=c++98 -Wall -Wextra -WErreur
 
 
 

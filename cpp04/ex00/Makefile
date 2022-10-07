@@ -3,7 +3,7 @@ SRCS= main.cpp Animal.cpp Dog.cpp Cat.cpp WrongCat.cpp WrongAnimal.cpp
 HEADER= Animal.hpp Dog.hpp Cat.hpp WrongCat.hpp WrongAnimal.hpp
 OBJS=$(SRCS:.cpp=.o)
 COMPIL= c++
-FLAGS= -std=c++98 -Wall -Wextra -Werror
+FLAGS= -std=c++98 -Wall -Wextra -WErreur
 
 
 

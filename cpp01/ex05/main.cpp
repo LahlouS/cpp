@@ -8,6 +8,6 @@ int main()
 	Harl_test.complain("DEBUG");
 	Harl_test.complain("INFO");
 	Harl_test.complain("WARNING");
-	Harl_test.complain("ERROR");
+	Harl_test.complain("Erreur");
 	return (0);
 }

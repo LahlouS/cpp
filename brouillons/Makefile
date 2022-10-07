@@ -1,7 +1,7 @@
 SRC:= test.cpp Personnage.cpp
 OBJ:= ${SRC:.cpp=.o}
 TARGET:= test
-OPT_98:= -Wall -Wextra -Werror --std=c++98
+OPT_98:= -Wall -Wextra -WErreur --std=c++98
 
 ${TARGET} : ${OBJ}
 	c++ ${OPT_98} -o ${TARGET} ${OBJ}

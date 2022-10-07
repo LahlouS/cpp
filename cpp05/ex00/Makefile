@@ -1,11 +1,9 @@
-NAME= ClapTrap
-SRCS= main.cpp ClapTrap.cpp
-HEADER= ClapTrap.hpp
+NAME= Bureaucrat
+SRCS= main.cpp bureaucrat.cpp
+HEADER= bureaucrat.hpp
 OBJS=$(SRCS:.cpp=.o)
 COMPIL= c++
-FLAGS= -std=c++98 -Wall -Wextra -WErreur
-
-
+FLAGS= -std=c++98 -Wall -Wextra -Werror
 
 %.o:	%.cpp
 	$(COMPIL) $(FLAGS) -c $< -o $@

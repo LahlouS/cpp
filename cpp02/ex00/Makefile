@@ -1,7 +1,7 @@
 SRC:= Fixed.cpp main.cpp
 OBJ:= ${SRC:.cpp=.o}
 TARGET:= cpp02Ex00
-OPT_98:= -Wall -Wextra -Werror --std=c++98
+OPT_98:= -Wall -Wextra -WErreur --std=c++98
 
 ${TARGET} : ${OBJ}
 	c++ ${OPT_98} -o ${TARGET} ${OBJ}

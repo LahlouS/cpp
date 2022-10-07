@@ -37,37 +37,37 @@
 // 	return 0;
 // }
 
-int main(){
-	Animal* j = new Cat();
-	Animal* i = new Cat();
-
-	std::cout << "\n\n";
-	j->makeSound();
-	std::cout << " Je suis un " << j->getType() << "\n";
-	i->makeSound();
-	std::cout << " Je suis un " << i->getType() << "\n";
-	std::cout << "\n\n";
-
-	//*j = *i;
-
-	((Cat *) j)->setIdea("I'm a silly dog!\n", 0);
-	((Cat *) j)->setIdea("I'm a horny cat!\n", 1);
-	((Cat *) i)->setIdea("BLURRRRRRRRR\n", 0);
-	((Cat *) i)->setIdea("SNURRRRRRRRR\n", 1);
-	std::cout << "IDEA 1: " << ((Cat *) j)->getIdea(0) << std::endl;
-	std::cout << "IDEA 2: " << ((Cat *) j)->getIdea(1) << std::endl;
-	std::cout << "IDEA 1: " << ((Cat *) i)->getIdea(0) << std::endl;
-	std::cout << "IDEA 2: " << ((Cat *) i)->getIdea(1) << std::endl;
-	*i = *j;
-	std::cout << "\n\n";
-	std::cout << "IDEA 1: " << ((Cat *) i)->getIdea(0) << std::endl;
-	std::cout << "IDEA 2: " << ((Cat *) i)->getIdea(1) << std::endl;
-
-	delete j;//should not create a leak
-	delete i;
-	return 0;
-}
-
 // int main(){
-// 	Animal A;
+// 	Animal* j = new Cat();
+// 	Animal* i = new Cat();
+
+// 	std::cout << "\n\n";
+// 	j->makeSound();
+// 	std::cout << " Je suis un " << j->getType() << "\n";
+// 	i->makeSound();
+// 	std::cout << " Je suis un " << i->getType() << "\n";
+// 	std::cout << "\n\n";
+
+// 	*j = *i;
+
+// 	((Cat *) j)->setIdea("I'm a silly dog!\n", 0);
+// 	((Cat *) j)->setIdea("I'm a horny cat!\n", 1);
+// 	((Cat *) i)->setIdea("BLURRRRRRRRR\n", 0);
+// 	((Cat *) i)->setIdea("SNURRRRRRRRR\n", 1);
+// 	std::cout << "IDEA 1: " << ((Cat *) j)->getIdea(0) << std::endl;
+// 	std::cout << "IDEA 2: " << ((Cat *) j)->getIdea(1) << std::endl;
+// 	std::cout << "IDEA 1: " << ((Cat *) i)->getIdea(0) << std::endl;
+// 	std::cout << "IDEA 2: " << ((Cat *) i)->getIdea(1) << std::endl;
+// 	*i = *j;
+// 	std::cout << "\n\n";
+// 	std::cout << "IDEA 1: " << ((Cat *) i)->getIdea(0) << std::endl;
+// 	std::cout << "IDEA 2: " << ((Cat *) i)->getIdea(1) << std::endl;
+
+// 	delete j;//should not create a leak
+// 	delete i;
+// 	return 0;
 // }
+
+int main(){
+	Animal A;
+}

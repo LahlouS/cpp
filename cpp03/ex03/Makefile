@@ -3,7 +3,7 @@ SRCS= main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp DiamondTrap.cpp
 HEADER= ClapTrap.hpp ScavTrap.hpp FragTrap.hpp DiamondTrap.hpp
 OBJS=$(SRCS:.cpp=.o)
 COMPIL= c++
-FLAGS= -std=c++98 -Wall -Wextra -Werror
+FLAGS= -std=c++98 -Wall -Wextra -WErreur
 
 
 

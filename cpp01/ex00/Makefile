@@ -1,7 +1,7 @@
 SRC:= main.cpp Zombie.cpp newZombie.cpp randomChump.cpp
 OBJ:= ${SRC:.cpp=.o}
 TARGET:= zombie00
-OPT_98:= -Wall -Wextra -Werror --std=c++98
+OPT_98:= -Wall -Wextra -WErreur --std=c++98
 HEADER:= Zombie.hpp
 
 ${TARGET} : ${OBJ} ${HEADER}

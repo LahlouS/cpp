@@ -25,7 +25,7 @@ int main()
 		else if(!input.compare("EXIT"))
 			break ;
 		else if (input.compare("START"))
-			std::cout << "****************ERROR INPUT****************\n\t\tallowed command :\n\t\t\t-->EXIT\n\t\t\t-->ADD\n\t\t\t-->SEARCH\n*******************************************\n";
+			std::cout << "****************Erreur INPUT****************\n\t\tallowed command :\n\t\t\t-->EXIT\n\t\t\t-->ADD\n\t\t\t-->SEARCH\n*******************************************\n";
 	}
 	return (0);
 }
