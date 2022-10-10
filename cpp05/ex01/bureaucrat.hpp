@@ -2,7 +2,10 @@
 #define BUREAUCRAT_HPP
 
 #include <exception>
+#include "Form.hpp"
+#include <string>
 
+class Form;
 class Bureaucrat{
 	public:
 		Bureaucrat();
@@ -17,7 +20,7 @@ class Bureaucrat{
 		Bureaucrat & operator--();
 		std::string getName(void) const;
 		int			getGrade(void) const;
-
+		void		signForm(Form & f) const;
 		class GradeToHighException : public std::exception {
 			public :
 				GradeToHighException() : exception::exception(), _ErrorMessage("Bureaucrat::Grade is too HIGH, only value between 1 to 150 are accepted\n"){

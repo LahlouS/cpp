@@ -72,6 +72,19 @@ Bureaucrat & Bureaucrat::operator--(){
 	return (*this);
 }
 
+void		Bureaucrat::signForm(Form & f) const{
+	try {
+		f.beSign(*this);
+		std::cout << this->getName() << ", signed form " << f.getName();
+	}
+	catch (std::exception const & e){
+		std::cout << this->getName() << ", couldn't sign " << f.getName() <<\
+		" because " << e.what();
+	}
+
+}
+
+
 std::ostream & operator<<(std::ostream & o, Bureaucrat const & output){
 	o << output.getName() << ", bureaucrate grade " << output.getGrade() << "\n";
 	return (o);
