@@ -33,18 +33,25 @@ void	programPause(void){
 // }
 
 int main(){
-	ShrubberyCreationForm test = ShrubberyCreationForm("Shrubberyfffffff");
-	RobotoMyRequestForm	testRoboto = RobotoMyRequestForm("CerfaRobot");
-	PresidentialPardonForm testPresident = PresidentialPardonForm("CERFAPRESIDENTIAL");
-	Bureaucrat B("didier", 1);
+	//ShrubberyCreationForm test = ShrubberyCreationForm("Shrubberyfffffff");
+	//RobotoMyRequestForm	testRoboto = RobotoMyRequestForm("Eric");
+	PresidentialPardonForm testPresident = PresidentialPardonForm("Jack");
+	Bureaucrat B("didier", 20);
 
 	// std::cout << test << std::endl;
 	 std::cout << "\n\n";
 	// std::cout << B;
 	// std::cout << "\n\n";
-	// test.execute(B);
+	try {
+		B.signForm(testPresident);
+		B.executeForm(testPresident);
+	}
+	catch (std::exception const & e){
+		std::cout << e.what();
+	}
+
 	// std::cout << "\n\n";
-	// testRoboto.execute(B);
-	testPresident.execute(B);
+	//testRoboto.execute(B);
+	//testPresident.execute(B);
 	return (0);
 }
