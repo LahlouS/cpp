@@ -13,49 +13,69 @@ void	programPause(void){
 	std::cin.get(backSlashN);
 }
 
-int main(){
+// int main(){
 
+// 	try{
+// 		PresidentialPardonForm form("cerfa08");
+// 		std::cout << form;
+// 		Bureaucrat B("sacha", 12);
+// 		Bureaucrat C("luc", 1);
+// 		std::cout << B;
+// 		std::cout << "\n\n\n";
+// 		B.signForm(form);
+// 		std::cout << "\n\n\n";
+// 		C.signForm(form);
+// 		std::cout << form;
+// 	}
+// 	catch(std::exception const & e){
+// 		std::cout << e.what();
+// 	}
+// 	return (0);
+// }
+
+int main(){
+	programPause();
+	{
+	PresidentialPardonForm testPresident = PresidentialPardonForm("Jack");
 	try{
-		PresidentialPardonForm form("cerfa08");
-		std::cout << form;
-		Bureaucrat B("sacha", 12);
-		Bureaucrat C("luc", 1);
-		std::cout << B;
-		std::cout << "\n\n\n";
-		B.signForm(form);
-		std::cout << "\n\n\n";
-		C.signForm(form);
-		std::cout << form;
+		Bureaucrat B("didier", 1);
+		try {
+			B.signForm(testPresident);
+			B.executeForm(testPresident);
+		}
+		catch (std::exception const & e){
+			std::cout << e.what();
+		}
 	}
-	catch(std::exception const & e){
+	catch (std::exception const & e){
 		std::cout << e.what();
+	}
+	}
+	programPause();
+	{
+	ShrubberyCreationForm test = ShrubberyCreationForm("target1");
+	RobotoMyRequestForm	testRoboto = RobotoMyRequestForm("Eric");
+
+
+		try{
+			Bureaucrat sacha("sacha", 1);
+			try {
+				// sacha.signForm(test);
+				// sacha.executeForm(test);
+				sacha.signForm(testRoboto);
+				sacha.executeForm(testRoboto);
+			}
+		catch (std::exception const & e){
+			std::cout << e.what();
+		}
+	}
+	catch (std::exception const & e){
+		std::cout << e.what();
+	}
+
 	}
 	return (0);
 }
-
-// int main(){
-// 	//ShrubberyCreationForm test = ShrubberyCreationForm("Shrubberyfffffff");
-// 	//RobotoMyRequestForm	testRoboto = RobotoMyRequestForm("Eric");
-// 	PresidentialPardonForm testPresident = PresidentialPardonForm("Jack");
-// 	Bureaucrat B("didier", 20);
-
-// 	// std::cout << test << std::endl;
-// 	 std::cout << "\n\n";
-// 	// std::cout << B;
-// 	// std::cout << "\n\n";
-// 	try {
-// 		B.signForm(testPresident);
-// 		B.executeForm(testPresident);
-// 	}
-// 	catch (std::exception const & e){
-// 		std::cout << e.what();
-// 	}
-
-// 	// std::cout << "\n\n";
-// 	//testRoboto.execute(B);
-// 	//testPresident.execute(B);
-// 	return (0);
-// }
 
 // int main(void){
 // {
@@ -65,4 +85,47 @@ int main(){
 // 	delete rrf;
 // }
 // return (0);
+// }
+
+
+// int main()
+// {
+//     try
+//     {
+//         Intern  intern;
+//         Form    *rrf;
+//         Bureaucrat  max("sach", 1);
+
+//         rrf = intern.makeForm("Presidential", "tintin");
+//         if (rrf)
+//         {
+//             max.signForm(*rrf);
+//             max.executeForm(*rrf);
+//             delete rrf;
+//         }
+//     }
+//     catch(const std::exception& e)
+//     {
+//         std::cerr << e.what() << '\n';
+//     }
+
+//     try
+//     {
+//         Intern  intern;
+//         Form    *rrf;
+//         Bureaucrat  max("sach", 1);
+
+//         rrf = intern.makeForm("Shrubbery", "tintin");
+//         if (rrf)
+//         {
+//             max.signForm(*rrf);
+//             max.executeForm(*rrf);
+//             delete rrf;
+//         }
+//     }
+//     catch(const std::exception& e)
+//     {
+//         std::cerr << e.what() << '\n';
+//     }
+//     return (0);
 // }

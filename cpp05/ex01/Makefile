@@ -1,4 +1,4 @@
-NAME= Bureaucrat
+NAME= Bureaucrat01
 SRCS= main.cpp bureaucrat.cpp Form.cpp
 HEADER= bureaucrat.hpp Form.hpp
 OBJS=$(SRCS:.cpp=.o)
