@@ -15,12 +15,18 @@ class Array{
 			// 	tab[i] = 0;
 		}
 		Array<T>(Array<T> const & copy){
+			this->tab = NULL;
 			*this = copy;
 		}
 
 		Array<T> const & operator=(Array<T> const & toAssign){
+			std::cout << "test test test\n";
 			this->_size = toAssign.size();
-			delete [] this->tab;
+			if (this->tab)
+			{
+				std::cout << "test1 1test1 test1\n";
+				delete [] this->tab;
+			}
 			tab = new T[_size];
 			for (unsigned int i = 0; i < _size; i++)
 				this->tab[i] = toAssign[i];

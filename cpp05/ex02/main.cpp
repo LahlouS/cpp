@@ -59,8 +59,8 @@ int main(){
 		try{
 			Bureaucrat sacha("sacha", 1);
 			try {
-				// sacha.signForm(test);
-				// sacha.executeForm(test);
+				 sacha.signForm(test);
+				 sacha.executeForm(test);
 				sacha.signForm(testRoboto);
 				sacha.executeForm(testRoboto);
 			}
