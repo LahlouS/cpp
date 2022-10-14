@@ -31,9 +31,20 @@ void	Span::addNumber(int nb){
 	std::sort(tab.begin(), tab.end());
 }
 
-void	Span::addNumber(int howMany, int nb){
-	for (int i = 0; tab.size() < _maxSize && i < howMany; i++)
-		addNumber(nb);
+void	Span::addNumber(int rangeFrom, int rangTo){
+	std::cout << "test test test\n";
+	tab.insert(tab.begin(), rangeFrom, rangTo);
+	if (tab.size() > _maxSize)
+		tab.resize(_maxSize);
+	std::sort(tab.begin(), tab.end());
+}
+
+void	Span::addNumber(int *rangeFrom, int *rangTo){
+	std::cout << "test test test\n";
+	tab.insert(tab.begin(), rangeFrom, rangTo);
+	if (tab.size() > _maxSize)
+		tab.resize(_maxSize);
+	std::sort(tab.begin(), tab.end());
 }
 
 void	Span::print(void) {

@@ -18,7 +18,8 @@ class Span {
 		int	getMaxsize() const;
 		std::vector<int> const & getTab() const;
 		void	addNumber(int nb);
-		void	addNumber(int howMany, int nb);
+		void	addNumber(int rangeFrom, int rangeTo);
+		void	addNumber(int *rangeFrom, int *rangeTo);
 		void	print(void);
 
 	private :
