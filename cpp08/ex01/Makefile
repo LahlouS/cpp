@@ -1,11 +1,9 @@
-NAME= easyfind
-SRCS= main.cpp
-HEADER= easyfind.hpp
+NAME= span
+SRCS= main.cpp Span.cpp
+HEADER= Span.hpp
 OBJS=$(SRCS:.cpp=.o)
 COMPIL= c++
 FLAGS= -std=c++98 -Wall -Wextra -Werror
-
-
 
 %.o:	%.cpp
 	$(COMPIL) $(FLAGS) -c $< -o $@

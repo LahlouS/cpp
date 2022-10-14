@@ -3,6 +3,7 @@
 
 #include <exception>
 #include <vector>
+#include <algorithm>
 #include <string>
 #include <iostream>
 
@@ -14,8 +15,14 @@ class Span {
 		~Span();
 		int	shortestSpan();
 		int	longestSpan();
+		int	getMaxsize() const;
+		std::vector<int> const & getTab() const;
+		void	addNumber(int nb);
+		void	addNumber(int howMany, int nb);
+		void	print(void);
+
 	private :
-		const int _maxSize;
+		unsigned long _maxSize;
 		std::vector<int> tab;
 };
 
