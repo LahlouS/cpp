@@ -7,6 +7,22 @@
 template <class T, class Container = std::deque<T> >
 class MutantStack : public std::stack<T>{
 	public :
+		MutantStack<T, Container>() : std::stack<T, Container>(){
+		}
+		
+		MutantStack<T, Container>(Container const & data) : std::stack<T, Container>(data){
+		}
+
+		MutantStack<T, Container>(MutantStack<T, Container> const & cpy) : std::stack<T, Container>(cpy){
+		}
+
+		virtual ~MutantStack<T, Container>(){
+		}
+
+		MutantStack<T, Container> &operator=(MutantStack<T, Container> const & toAssign) {
+			std::stack<T, Container>::operator=(toAssign);
+		}
+
 		typedef typename Container::iterator iterator;
 		typedef typename Container::const_iterator const_iterator;
 		typedef typename Container::reverse_iterator reverse_iterator;
